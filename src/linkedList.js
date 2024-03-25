@@ -18,6 +18,11 @@ const CreateLinkedList = () => {
                 tailCheck(_headNode).setNext(CreateNode(value));
             }
         },
+        preprend: (value) => {
+            const newNode = CreateNode(value);
+            newNode.setNext(_headNode);
+            _headNode = newNode;
+        },
         head: () => _headNode,
         toString: () => {
             let result = "";

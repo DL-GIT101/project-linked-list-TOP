@@ -1,8 +1,10 @@
 import { CreateLinkedList } from "./linkedList";
 
 const list = CreateLinkedList();
-console.log(list.head());
 list.append("sample");
-list.append("test");
 console.log(list.head().getValue());
-console.log(list.toString());
+list.preprend("test");
+console.log(list.head().getValue());
+list.preprend("trial");
+const body = document.querySelector('body');
+body.textContent = list.toString();
