@@ -18,7 +18,7 @@ const CreateLinkedList = () => {
                 tailCheck(_headNode).setNext(CreateNode(value));
             }
         },
-        preprend: (value) => {
+        prepend: (value) => {
             const newNode = CreateNode(value);
             newNode.setNext(_headNode);
             _headNode = newNode;
