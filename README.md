@@ -1,4 +1,3 @@
-# repository-template
-Repository Template for my projects 
+# project-linked-list-TOP
 
-This is mainly for webpack
+A TOP project where linked list factory and functions are created

@@ -1,7 +1,7 @@
 {
-  "name": "repository-template",
+  "name": "project-linked-list-top",
   "version": "1.0.0",
-  "description": "Repository Template for my projects",
+  "description": "A TOP project where linked list factory and functions are created",
   "private": true,
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
