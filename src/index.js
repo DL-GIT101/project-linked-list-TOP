@@ -5,3 +5,4 @@ console.log(list.head());
 list.append("sample");
 list.append("test");
 console.log(list.head().getValue());
+console.log(list.toString());

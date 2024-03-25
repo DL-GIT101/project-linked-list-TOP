@@ -19,6 +19,20 @@ const CreateLinkedList = () => {
             }
         },
         head: () => _headNode,
+        toString: () => {
+            let result = "";
+            const tailCheck = (node) => {
+                if(node.getNext() == null) {
+                    result += '( ' + node.getValue()  + ' )' +  ' -> null ';
+                } else {
+                    result += '( ' + node.getValue()  + ' )' +  ' -> ';
+                    tailCheck(node.getNext());
+                    
+                }
+            }
+        tailCheck(_headNode);
+        return result;
+        }
     }
 }
 
