@@ -37,6 +37,18 @@ const CreateLinkedList = () => {
             return iteration;
         },
         head: () => _headNode,
+        tail: () => {
+            let lastNode = null;
+            const tailCheck = (node) => {
+                if(node.getNext() == null) {
+                    lastNode = node;
+                } else {
+                    tailCheck(node.getNext());
+                }
+            }
+            tailCheck(_headNode);
+            return lastNode;
+        },
         toString: () => {
             let result = "";
             const tailCheck = (node) => {
@@ -45,7 +57,6 @@ const CreateLinkedList = () => {
                 } else {
                     result += '( ' + node.getValue()  + ' )' +  ' -> ';
                     tailCheck(node.getNext());
-                    
                 }
             }
             tailCheck(_headNode);

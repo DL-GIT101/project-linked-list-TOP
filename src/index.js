@@ -16,10 +16,13 @@ const prependResult = createPara(list.toString());
 const sizeResult = createPara('size: ' + list.size());
 //head
 const headResult = createPara('head: ( ' + list.head().getValue() + ' )');
+//tail 
+const tailResult = createPara('tail: ( ' + list.tail().getValue() + ' )');
 //display
 const body = document.querySelector('body');
 body.append(listCreate,listResult,
             append,appendResult,
             prepend,prependResult,
             sizeResult,
-            headResult);   
+            headResult,
+            tailResult);   
