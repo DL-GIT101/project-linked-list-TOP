@@ -6,7 +6,7 @@ const CreateLinkedList = () => {
     return {
         append: (value) => {
             const tailCheck = (node) => {
-                if(node.getNext() == null) {
+                if(node == null) {
                     return node;
                 } else {
                     tailCheck(node.getNext());
@@ -26,8 +26,8 @@ const CreateLinkedList = () => {
         size: () => {
             let iteration = 0;
             const tailCheck = (node) => {
-                if(node.getNext() == null) {
-                    iteration += 1;
+                if(node == null) {
+                    iteration += 0;
                 } else {
                     iteration += 1;
                     tailCheck(node.getNext());
@@ -40,8 +40,8 @@ const CreateLinkedList = () => {
         toString: () => {
             let result = "";
             const tailCheck = (node) => {
-                if(node.getNext() == null) {
-                    result += '( ' + node.getValue()  + ' )' +  ' -> null ';
+                if(node == null){
+                    result += 'null';
                 } else {
                     result += '( ' + node.getValue()  + ' )' +  ' -> ';
                     tailCheck(node.getNext());
