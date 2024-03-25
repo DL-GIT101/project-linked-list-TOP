@@ -1,5 +1,7 @@
-import { node } from "./linkedList";
+import { CreateLinkedList } from "./linkedList";
 
-const noodle = node("egg noodle");
-
-console.log(noodle.next);
+const list = CreateLinkedList();
+console.log(list.head());
+list.append("sample");
+list.append("test");
+console.log(list.head().getValue());
