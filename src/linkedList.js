@@ -93,6 +93,20 @@ const CreateLinkedList = () => {
         },
         find: (value) => {
             let index = 0;
+            let result = null;
+            const tailCheck = (node) => {
+                if(node == null) {
+                    result = 'null';
+                }
+                else if(node.getValue() == value) {
+                    result = index;
+                } else {
+                    index += 1;
+                    tailCheck(node.getNext());
+                }
+            }
+            tailCheck(_headNode);
+            return result;
         },
         toString: () => {
             let result = "";
