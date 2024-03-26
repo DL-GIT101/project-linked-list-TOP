@@ -28,6 +28,10 @@ const headResult = createPara('head: ( ' + list.head().getValue() + ' )');
 const tailResult = createPara('tail: ( ' + list.tail().getValue() + ' )');
 //at
 const atResult = createPara('at index 2: ( ' + list.at(2).getValue() + ' )');
+//pop
+list.pop();
+const pop = createPara('pop: ( trial )');
+const popResult = createPara(list.toString());
 //display
 const body = document.querySelector('body');
 body.append(listCreate,listResult,
@@ -38,4 +42,5 @@ body.append(listCreate,listResult,
             prepend2,prependResult2,
             headResult,
             tailResult,
-            atResult);   
+            atResult,
+            pop,popResult);   

@@ -63,6 +63,19 @@ const CreateLinkedList = () => {
             check(_headNode);
             return atNode;
         },
+        pop: () => {
+            const tailCheck = (node) => {
+                if(node.getNext() == null){
+                    _headNode = null;
+                }
+                else if(node.getNext().getNext() == null) {
+                    node.setNext(null);
+                } else {
+                    tailCheck(node.getNext());
+                }
+            }
+            tailCheck(_headNode);
+        },
         toString: () => {
             let result = "";
             const tailCheck = (node) => {
