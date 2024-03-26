@@ -1,5 +1,6 @@
 import { CreateLinkedList } from "./linkedList";
 import { createPara } from "./others";
+import './style.css';
 //create list
 const list = CreateLinkedList();
 const listCreate = createPara('create list');
