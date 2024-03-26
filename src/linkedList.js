@@ -50,7 +50,7 @@ const CreateLinkedList = () => {
             return lastNode;
         },
         at: (index) => {
-            let counter = 1;
+            let counter = 0;
             let atNode = null;
             const check = (node) => {
                 if(counter == index) {
@@ -90,6 +90,9 @@ const CreateLinkedList = () => {
             }
             tailCheck(_headNode);
             return result;
+        },
+        find: (value) => {
+            let index = 0;
         },
         toString: () => {
             let result = "";
