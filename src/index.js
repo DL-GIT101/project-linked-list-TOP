@@ -33,6 +33,12 @@ const atResult = createPara('at index 2: ( ' + list.at(2).getValue() + ' )');
 list.pop();
 const pop = createPara('pop: ( trial )');
 const popResult = createPara(list.toString());
+//contains
+const contains = createPara('contains: ( test )');
+const containsResult = createPara(list.contains('test'));
+//contains 2
+const contains2 = createPara('contains: ( snake )');
+const containsResult2 = createPara(list.contains('snake'));
 //display
 const body = document.querySelector('body');
 body.append(listCreate,listResult,
@@ -44,4 +50,6 @@ body.append(listCreate,listResult,
             headResult,
             tailResult,
             atResult,
-            pop,popResult);   
+            pop,popResult,
+            contains,containsResult,
+            contains2,containsResult2,);   

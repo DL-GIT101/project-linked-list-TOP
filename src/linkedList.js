@@ -76,6 +76,21 @@ const CreateLinkedList = () => {
             }
             tailCheck(_headNode);
         },
+        contains: (value) => {
+            let result = false;
+            const tailCheck = (node) => {
+                if(node == null) {
+                    result = false;
+                }
+                else if(node.getValue() == value) {
+                    result = true;
+                } else {
+                    tailCheck(node.getNext());
+                }
+            }
+            tailCheck(_headNode);
+            return result;
+        },
         toString: () => {
             let result = "";
             const tailCheck = (node) => {
