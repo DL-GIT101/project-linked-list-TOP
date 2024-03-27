@@ -137,6 +137,22 @@ const CreateLinkedList = () => {
                 }
             }
             _headNode = (indexAt(_headNode));
+        },
+        removeAt: (index) => {
+            let iteration = 0;
+            const indexAt = (node) => {
+                if(node == null) {
+                    return;
+                } else if(iteration == index){
+                    const newNode = node.getNext();
+                    return newNode;
+                } else {
+                    iteration += 1;
+                    node.setNext(indexAt(node.getNext()));
+                    return node;
+                }
+            }
+            _headNode = (indexAt(_headNode));
         }
     }
 }

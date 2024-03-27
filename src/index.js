@@ -49,6 +49,10 @@ const findResult2 = createPara(list.find('snake'));
 const insertAt = createPara('insertAt: ( here , 2 )');
 list.insertAt("here", 2);
 const insertAtResult = createPara(list.toString());
+// remove at
+const removeAt = createPara('removeAt: ( here , 2 )');
+list.removeAt(2);
+const removeAtResult = createPara(list.toString());
 //display
 const body = document.querySelector('body');
 body.append(listCreate,listResult,
@@ -65,4 +69,5 @@ body.append(listCreate,listResult,
             contains2,containsResult2,
             find,findResult,
             find2,findResult2,
-            insertAt,insertAtResult);   
+            insertAt,insertAtResult,
+            removeAt,removeAtResult);   
