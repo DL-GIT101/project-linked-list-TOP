@@ -45,6 +45,10 @@ const findResult = createPara(list.find('test'));
 //contains 2
 const find2 = createPara('find: ( snake )');
 const findResult2 = createPara(list.find('snake'));
+// insert at
+const insertAt = createPara('insertAt: ( here , 2 )');
+list.insertAt("here", 2);
+const insertAtResult = createPara(list.toString());
 //display
 const body = document.querySelector('body');
 body.append(listCreate,listResult,
@@ -60,4 +64,5 @@ body.append(listCreate,listResult,
             contains,containsResult,
             contains2,containsResult2,
             find,findResult,
-            find2,findResult2);   
+            find2,findResult2,
+            insertAt,insertAtResult);   

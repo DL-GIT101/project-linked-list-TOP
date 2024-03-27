@@ -120,6 +120,23 @@ const CreateLinkedList = () => {
             }
             tailCheck(_headNode);
             return result;
+        },
+        insertAt: (value, index) => {
+            let iteration = 0;
+            const indexAt = (node) => {
+                if(iteration == index){
+                    const newNode = CreateNode(value);
+                    newNode.setNext(node);
+                    return newNode;
+                } else if(node == null) {
+                    return;
+                } else {
+                    iteration += 1;
+                    node.setNext(indexAt(node.getNext()));
+                    return node;
+                }
+            }
+            _headNode = (indexAt(_headNode));
         }
     }
 }
